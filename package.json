@@ -5,6 +5,8 @@
   "private": true,
   "dependencies": {
     "@babel/runtime": "^7.8.4",
+    "@types/d3-array": "^2.0.0",
+    "@types/d3-time-format": "^2.1.1",
     "@types/faker": "^4.1.12",
     "@types/react": "^16",
     "@types/react-dom": "^16",
