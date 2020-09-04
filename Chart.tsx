@@ -13,7 +13,7 @@ import { timeFormat } from 'd3-time-format';
 
 type TooltipData = AppleStock;
 
-const stock = appleStock.slice(800);
+const stock = appleStock.slice(12);
 export const background = '#3b6978';
 export const background2 = '#204051';
 export const accentColor = '#edffea';
@@ -39,7 +39,7 @@ export type AreaProps = {
   margin?: { top: number; right: number; bottom: number; left: number };
 };
 
-export const Graph = withTooltip<AreaProps, TooltipData>(
+export default withTooltip<AreaProps, TooltipData>(
   ({
     width,
     height,
@@ -109,7 +109,7 @@ export const Graph = withTooltip<AreaProps, TooltipData>(
           />
           <LinearGradient id="area-background-gradient" from={background} to={background2} />
           <LinearGradient id="area-gradient" from={accentColor} to={accentColor} toOpacity={0.1} />
-          <GridRows<number>
+          <GridRows
             scale={stockValueScale}
             width={xMax}
             strokeDasharray="3,3"
@@ -117,7 +117,7 @@ export const Graph = withTooltip<AreaProps, TooltipData>(
             strokeOpacity={0.3}
             pointerEvents="none"
           />
-          <GridColumns<Date>
+          <GridColumns
             scale={dateScale}
             height={yMax}
             strokeDasharray="3,3"

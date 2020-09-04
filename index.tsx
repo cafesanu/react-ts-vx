@@ -1,19 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
-import {Chart} from './Chart';
-import './style.css';
+import ParentSize from '@vx/responsive/lib/components/ParentSize';
 
-interface AppProps { }
-interface AppState {
-  name: string;
-}
+import Chart from './Chart';
 
-const App = () => {
-  return (
-    <div>
-      <Chart/>
-    </div>
-  );
-}
-
-render(<App />, document.getElementById('root'));
+render(
+  <ParentSize>{({ width, height }) => <Chart width={width} height={height} />}</ParentSize>,
+  document.getElementById('root'),
+);
