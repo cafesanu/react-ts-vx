@@ -122,6 +122,7 @@ export default withTooltip<AreaProps, TooltipData>(
 
     return (
       <div>
+        <h1>VX</h1>
         <button
           style={{ marginRight: '5px' }}
           onClick={() => {
