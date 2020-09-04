@@ -10,10 +10,50 @@ import { localPoint } from '@vx/event';
 import { LinearGradient } from '@vx/gradient';
 import { max, extent, bisector } from 'd3-array';
 import { timeFormat } from 'd3-time-format';
+import { random } from 'faker';
 
 type TooltipData = AppleStock;
+const random0to60 = () => random.number({ min: 0, max: 60 });
 
-const stock = appleStock.slice(12);
+const stock = [{
+    date: "2007-04-25T07:00:00.000Z",
+    close: random0to60()
+  },{
+    date: "2007-04-24T07:00:00.000Z",
+    close: random0to60()
+  },{
+    date: "2007-04-26T07:00:00.000Z",
+    close: random0to60()
+  },{
+    date: "2007-04-27T07:00:00.000Z",
+    close: random0to60()
+  },{
+    date: "2007-04-30T07:00:00.000Z",
+    close: random0to60()
+  },{
+    date: "2007-05-01T07:00:00.000Z",
+    close: random0to60()
+  },{
+    date: "2007-05-02T07:00:00.000Z",
+    close: random0to60()
+  },{
+    date: "2007-05-03T07:00:00.000Z",
+    close: random0to60()
+  },{
+    date: "2007-05-04T07:00:00.000Z",
+    close: random0to60()
+  },{
+    date: "2007-05-07T07:00:00.000Z",
+    close: random0to60()
+  },{
+    date: "2007-05-08T07:00:00.000Z",
+    close: random0to60()
+  },{
+    date: "2007-05-09T07:00:00.000Z",
+    close: random0to60()
+  }
+];
+console.log(JSON.stringify(stock));
 export const background = '#3b6978';
 export const background2 = '#204051';
 export const accentColor = '#edffea';
